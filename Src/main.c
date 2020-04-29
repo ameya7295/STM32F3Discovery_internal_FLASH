@@ -36,7 +36,6 @@
 /* USER CODE BEGIN PD */
 #define FLASH_STORAGE 0x08005000
 #define page_size 0x200
-#define ifdef 0
 
 void write_to_flash(uint8_t* data)
 {
@@ -102,15 +101,13 @@ void read_from_flash(uint8_t* data)
 	read_count;
 }
 
-#ifdef 0
+
 uint32_t Readflash(uint32_t addr)
 {
  uint32_t* data = (uint32_t*)(addr);
  return *data;
 }
-#endif
 
-#ifdef 0
 void Write_Buff_To_InternalFlash(uint8_t data_in[],uint32_t start_addr,unsigned int len)
 {
 	unsigned int i;
@@ -150,9 +147,6 @@ void Write_Buff_To_InternalFlash(uint8_t data_in[],uint32_t start_addr,unsigned 
 					return FLASH_WRONG_DATA_WRITTEN;
 		*/
 }
-#endif
-
-
 void Read_Buff_From_InternalFlash(uint8_t data_out[],uint32_t start_addr,unsigned int len)
 {
 	 unsigned int i;
